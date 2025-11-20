@@ -8,6 +8,7 @@ const navItems = [
   { to: '/teaching', label: 'Teaching' },
   { to: '/tournaments', label: 'Tournaments' },
   { to: '/impact', label: 'Impact' },
+  { to: '/testimonials', label: 'Testimonials' },
   { to: '/gallery', label: 'Gallery' },
   { to: '/about', label: 'About Me' },
 ]
@@ -56,7 +57,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <a href="#" aria-label="LinkedIn" className="hidden sm:inline-flex p-2 text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
             <a href="#" aria-label="GitHub" className="hidden sm:inline-flex p-2 text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"><Github className="w-5 h-5" /></a>
-            <button aria-label="Toggle theme" onClick={() => setIsDark(v => !v)} className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/10 transition">
+            <button aria-label="Toggle theme" onClick={() => setIsDark(v => !v)} className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg:white/10 transition">
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             <button className="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-white/10" onClick={() => setOpen(v => !v)} aria-label="Toggle menu">

@@ -6,6 +6,7 @@ import Tournaments from './pages/Tournaments'
 import Impact from './pages/Impact'
 import Gallery from './pages/Gallery'
 import About from './pages/About'
+import Testimonials from './pages/Testimonials'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/teaching" element={<Teaching />} />
       <Route path="/tournaments" element={<Tournaments />} />
       <Route path="/impact" element={<Impact />} />
+      <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/about" element={<About />} />
     </Routes>

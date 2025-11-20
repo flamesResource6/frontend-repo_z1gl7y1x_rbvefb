@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SectionHeading from '../components/SectionHeading'
 import { motion } from 'framer-motion'
+import Counter from '../components/Counter'
 
 export default function Impact() {
   return (
@@ -12,9 +13,9 @@ export default function Impact() {
           <SectionHeading eyebrow="Fundraising & Community" title="Impact and Outcomes" subtitle="Transparent use of funds, beneficiaries, and community results. Counters and infographics styled for clarity." />
 
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            {[{label:'Raised',value:'$2,500+'},{label:'Scholarships Provided',value:'8+'},{label:'Equipment Purchased',value:'Boards, clocks, books'}].map((i, idx)=>(
+            {[{label:'Raised',value:2500,prefix:'$',suffix:'+'},{label:'Scholarships Provided',value:8,suffix:'+'},{label:'Equipment Purchased',value:32,suffix:'+ sets'}].map((i, idx)=>(
               <motion.div key={idx} initial={{opacity:0,y:12}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:idx*0.05}} className="p-6 rounded-2xl bg-white border border-black/10 shadow-sm text-center">
-                <p className="text-3xl font-extrabold tracking-tight">{i.value}</p>
+                <p className="text-3xl font-extrabold tracking-tight"><Counter to={i.value} prefix={i.prefix} suffix={i.suffix} /></p>
                 <p className="mt-2 text-gray-600">{i.label}</p>
               </motion.div>
             ))}
